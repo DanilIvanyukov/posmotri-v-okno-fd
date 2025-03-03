@@ -1,4 +1,4 @@
-*, 1
+*,
 *::before,
 *::after {
   box-sizing: border-box;
@@ -14,9 +14,9 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto;
+  margin: 0 auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
 }
@@ -36,13 +36,13 @@ fieldset {
 }
 
 .visually-hidden {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
+  position: absolute;
   width: 1px;
   height: 1px;
   overflow: hidden;
-  position: absolute;
+  clip: rect(0 0 0 0);
   white-space: nowrap;
+  clip-path: inset(50%);
 }
 
 ul,
@@ -66,23 +66,25 @@ ol {
 /*форма резульата и поиска*/
 
 .content {
-  inline-size: 100%;
-  gap: 30px;
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-areas: "result details";
   align-items: end;
+  gap: 30px;
+  inline-size: 100%;
 }
 
 .result {
-  width: 100%;
+  display: block;
   grid-area: result;
   align-self: flex-end;
+  width: 100%;
 }
 
 .result__video-container {
-  margin-bottom: 16px;
+  display: block;
   position: relative;
+  margin-bottom: 10px;
 }
 
 .result__video {
@@ -98,18 +100,21 @@ ol {
   display: flex;
   justify-content: space-between ;
   align-items: end;
+
 }
 
 .search-form__fieldset {
   border: none;
+  width: 225px;
 }
 
 .search-form__fieldset-title {
   color: rgb(255, 255, 255);
-  font-family: Fira Sans Condensed;
-  font-size: 18px;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
+  font-size: 18px;
   line-height: 22px;
+  margin: 5px 0;
 }
 
 .search-form__label {
@@ -125,7 +130,10 @@ ol {
 }
 
 .search-form__checkbox-list {
-
+display: flex;
+justify-content: space-between;
+width: 212px;
+gap: 15px
 }
 
 .search-form__checkbox {
@@ -133,23 +141,25 @@ ol {
 }
 
 .search-form__pseudo-checkbox {
-
+  width: 19px;
+  height: 19px;
+  border: 1px solid rgb(255, 255, 255);
 }
 
 /*Форма контента*/
 
 .content__details {
-  width: 399px;
-  grid-area: details;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  grid-area: details;
   gap: 20px;
 }
 
 .title {
-  font-family: Oswald;
-  font-size: 75px;
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
+  font-size: 75px;
   line-height: 94%;
   text-transform: uppercase;
 }
@@ -159,17 +169,17 @@ ol {
 
 .content__list {
   display: flex;
-  gap: 25px;
-  justify-content: space-between;
   flex-direction: column;
+  justify-content: space-between;
+  gap: 25px;
 }
 
 .content__list-container {
+  position: relative;
   max-width: 100%;
   height: 298px;
-  position: relative;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: auto;
+  
 }
 
 .content__list-item {
@@ -213,35 +223,35 @@ ol {
 }
 
 .content__video-card-description-container {
-  max-width: 196px;
   width: 100%;
+  max-width: 196px;
 }
 
 .content__video-card-title {
+  overflow: hidden;
+  color: #fff;
+  font-family: Oswald;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 100%;
   text-transform: uppercase;
   text-overflow: ellipsis;
-  overflow: hidden;
   text-wrap: nowrap;
-  font-family: Oswald;
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 100%;
-  color: #fff;
 }
 
 .content__video-card-description {
+  display: -webkit-box;
+  margin-top: 6px;
+  overflow: hidden;
   color: rgb(255, 255, 255);
   font-family: Fira Sans Condensed;
-  font-size: 18px;
   font-weight: 400;
+  font-size: 18px;
   line-height: 16.2px;
-  margin-top: 6px;
-  display: -webkit-box;
+  text-overflow: ellipsis;
   -webkit-line-clamp: 2;
   line-clamp: 2;
   -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .content__video-card-thumbnail {
@@ -252,9 +262,22 @@ ol {
 
 }
 .button {
-
+  color: rgb(255, 255, 255);
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  border: 1px solid rgb(255, 255, 255);
+  background-color: transparent;
 }
 
-.more-button-template {
+.search-form__submit-button {
+  width: 194px;
+  height: 34px;
+}
 
+.more-button {
+  width: 100%;
+  height: 34px;
+  margin-top: 30px;
 }
