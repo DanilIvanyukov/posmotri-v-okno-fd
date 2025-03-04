@@ -153,7 +153,7 @@ ol {
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
-}
+} 
 
 .search-form__label {
   display: flex;
@@ -167,14 +167,14 @@ ol {
   line-height: 22px;
 }
 
+.search-form__label:hover .search-form__label-text {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .search-form__label:has(:focus-visible):not(:active) {
   outline: 1px solid #fff;
   outline-offset: 1px;
-}
-
-.search-form__label-text:hover {
-  text-decoration: underline;
-  cursor: pointer;
 }
 
 .search-form__label-text:focus {
@@ -309,7 +309,7 @@ ol {
   margin-top: 6px;
   overflow: hidden;
   color: rgb(255, 255, 255);
-  font-family: Fira Sans Condensed;
+  font-family: "Fira Sans Condensed", sans-serif;;
   font-weight: 400;
   font-size: 18px;
   line-height: 16.2px;
@@ -331,7 +331,7 @@ ol {
 .button {
   border: 1px solid rgb(255, 255, 255);
   color: rgb(255, 255, 255);
-  font-family: Fira Sans Condensed;
+  font-family: "Fira Sans Condensed", sans-serif;;
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
