@@ -157,6 +157,7 @@ gap: 15px
 }
 
 .title {
+  display: block;
   font-family: "Oswald", sans-serif;
   font-weight: 700;
   font-size: 75px;
@@ -171,7 +172,7 @@ gap: 15px
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 25px;
+  gap: 30px;
 }
 
 .content__list-container {
@@ -222,6 +223,24 @@ gap: 15px
   max-width: 100%;
 }
 
+.content__video-card:active {
+  background-color: #545050;
+}
+
+.content__video-card:hover {
+  text-decoration: underline solid #fff;
+  cursor: pointer;
+}
+
+.content__video-card:focus {
+  outline: none;
+}
+
+.content__video-card:focus-visible {
+  outline: 1px solid #fff;
+  
+}
+
 .content__video-card-description-container {
   width: 100%;
   max-width: 196px;
@@ -255,8 +274,8 @@ gap: 15px
 }
 
 .content__video-card-thumbnail {
-  max-width: 194px;
-  min-height: 103px;
+  width: 194px;
+  height: 103px;
   object-fit: cover;
   object-position: center;  
 
@@ -271,13 +290,33 @@ gap: 15px
   background-color: transparent;
 }
 
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.button:active {
+  background-color: #545050;
+}
+
 .search-form__submit-button {
   width: 194px;
   height: 34px;
 }
 
 .more-button {
-  width: 100%;
+  display: block;
+  min-width: 390px;
+  margin: 0 auto 2px;
   height: 34px;
   margin-top: 30px;
 }
